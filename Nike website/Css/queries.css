@@ -1,0 +1,74 @@
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+  header .nav {
+    grid-template-columns: 1fr 7fr 1fr;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 900px;
+  }
+  header .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .nav .submit_search,
+  header .searchBarDesk,
+  header .links {
+    display: none;
+  }
+  header .nav .ham_menu {
+    display: block;
+  }
+  header .mobile-nav,
+  header .mobile-nav .linksMob {
+    display: flex;
+  }
+
+  .hero-section {
+    flex-direction: column-reverse;
+  }
+  .info-column {
+    flex-direction: row;
+    margin-top: 100px;
+  }
+  .hero-section .profile {
+    display: none;
+  }
+  .profile {
+    margin-top: 0;
+    gap: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 600px;
+  }
+}
+@media (max-width: 640px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (max-width: 440px) {
+  .container {
+    max-width: 400px;
+  }
+  .hero-section .shoe_preview .hero-text h1 {
+    font-size: 125px;
+  }
+  .info-column {
+    flex-direction: row;
+    margin-top: 200px;
+  }
+  .profile {
+    margin-top: 0;
+    gap: 30px;
+  }
+  .hero-section {
+    height: calc(100vh - 110px);
+  }
+}

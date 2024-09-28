@@ -1,0 +1,196 @@
+:root {
+  --MainColor: #0c0c0c;
+  --MainColorVar: #242424;
+  --TextLinear: #353535;
+  --TextLinearVar: #212121;
+  --textLinear: linear-gradient(
+    to bottom,
+    var(--TextLinear),
+    var(--TextLinearVar)
+  );
+  --backgroundLinear: linear-gradient(
+    to bottom,
+    var(--MainColor) 0% 50%,
+    var(--MainColorVar)
+  );
+  --white: #f7f7f7;
+}
+
+/*-------NAV SECTION-------*/
+header {
+  padding-block: 35px;
+}
+header .nav {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+header .logo {
+  margin-right: 50px;
+}
+header .links {
+  display: flex;
+  gap: 50px;
+}
+header .submit_search {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 100%;
+  background-color: var(--white);
+  color: var(--MainColor);
+}
+header .ham_menu {
+  display: none;
+  z-index: 2;
+}
+ion-icon {
+  display: flex;
+  font-size: 36px;
+  color: var(--white);
+}
+header .mobile-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 65%;
+  height: 100%;
+  padding: 90px 48px;
+  backdrop-filter: blur(3px);
+  background: #0000009e;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  transition: 1s;
+  transform: translateX(100%);
+  display: none;
+  z-index: 1;
+}
+header .mobile-nav .linksMob {
+  flex-direction: column;
+  display: flex;
+  gap: 50px;
+}
+header .mobile-nav .navmenu {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+header .searchBar input {
+  display: flex;
+  align-items: center;
+  padding: 16px 28px;
+  border-radius: 55px;
+  background-color: var(--white);
+  font-size: 18px;
+}
+header .searchBar input:focus {
+  outline: none;
+  border: none;
+}
+header .searchBar input::placeholder {
+  font-size: 18px;
+  color: #919191;
+}
+header .searchBar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+header .submit_searchMob {
+  position: absolute;
+  margin-right: 25px;
+}
+header .searchBarDesk input {
+  width: 30px;
+  padding: 12px 14px;
+  font-size: 14px;
+  transition: 0.5s;
+}
+header .searchBarDesk button {
+  padding: 12px 14px;
+  background-color: #fff;
+  border-radius: 100%;
+  margin-right: -10px;
+}
+header .searchBarDesk:hover input {
+  width: 175px;
+}
+header .searchBarDesk:hover button {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 100%;
+  background-color: var(--white);
+  color: var(--MainColor);
+}
+header .searchBarDesk input::placeholder {
+  font-size: 14px;
+}
+header .searchBar input::-webkit-search-cancel-button {
+  display: none;
+}
+/*-------NAV SECTION-------*/
+
+/*-------HERO SECTION-------*/
+.hero-section {
+  padding-inline: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 250px);
+}
+.hero-section .shoe_preview {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.hero-section .shoe_preview img {
+  position: absolute;
+  transition: 1s;
+  transform: rotate(-25deg) translateX(-120px) translateY(25px);
+}
+.hero-section .shoe_preview .hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hero-section .shoe_preview .hero-text h1 {
+  font-size: 190px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: var(--white);
+}
+.hero-section .shoe_preview .hero-text .jordan {
+  background: var(--textLinear);
+  line-height: 0.8;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 4px 100px rgba(24, 24, 24, 0.6);
+}
+.info-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--white);
+  font-weight: 600;
+  gap: 30px;
+  font-size: 18px;
+}
+.info-column .point {
+  font-size: 6px;
+}
+.info-column ion-icon,
+.info-column i {
+  cursor: pointer;
+  transition: 0.5s;
+}
+.info-column ion-icon:hover,
+.info-column i:hover {
+  transform: scale(1.2);
+}
+/*-------HERO SECTION-------*/
